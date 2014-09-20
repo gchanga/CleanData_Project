@@ -21,7 +21,7 @@ names(newdata) <- gsub("Acc"," acceleration",names(newdata))
 names(newdata) <- gsub("Gyro"," gyroscope",names(newdata))
 names(newdata) <- gsub("Jerk"," jerk",names(newdata))
 names(newdata) <- gsub("Mag"," magnitude",names(newdata))
-names(newdata) <- gsub("Gravity"," gravity",names(newdata))
+names(newdata) <- gsub("Gravity","gravity",names(newdata))
 names(newdata) <- gsub("X"," xaxis",names(newdata))
 names(newdata) <- gsub("Y"," yaxis",names(newdata))
 names(newdata) <- gsub("Z"," zaxis",names(newdata))
@@ -33,7 +33,7 @@ names(newdata) <- gsub("^t","time ",names(newdata))
 #Removing the () and - symbols and duplicate words
 names(newdata) <- gsub( "\\(|\\)|\\-" , "" , names(newdata) )
 names(newdata) <- tolower(names(newdata))
-names(newdata) <- gsub("bodybody", " body",names(newdata))
+names(newdata) <- gsub("bodybody", "body",names(newdata))
 
 #Create a second data set with mean of each var for each activity and each subject
 merged <- newdata[0,]
